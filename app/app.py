@@ -12,7 +12,7 @@ port = '27017'              # port number of the mongodb admin server as set in 
 conn_string = f'mongodb://{user}:{password}@{host}:{port}'
 
 db = MongoClient(conn_string).blog
-s
+
 @app.route('/')
 def home():
     posts = list(db.posts.find({}))
